@@ -1,0 +1,323 @@
+{
+  "generatedAt": "2026-07-15T13:33:33.138Z",
+  "screenCount": 1,
+  "screens": {
+    "1adfab30f27d49fcad0bd2b2b6541467": {
+      "screenId": "1adfab30f27d49fcad0bd2b2b6541467",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "nav",
+          "layout": "absolute",
+          "classes": [
+            "hidden",
+            "md:flex",
+            "bg-surface",
+            "dark:bg-surface",
+            "text-primary",
+            "dark:text-primary-fixed",
+            "font-body-sm",
+            "text-body-sm",
+            "fixed",
+            "left-0"
+          ],
+          "childCount": 12
+        },
+        {
+          "tag": "header",
+          "layout": "absolute",
+          "classes": [
+            "bg-surface-container-lowest",
+            "dark:bg-surface-container-lowest",
+            "text-primary",
+            "dark:text-primary-fixed",
+            "font-headline-md",
+            "text-headline-md",
+            "fixed",
+            "top-0",
+            "w-full",
+            "z-50"
+          ],
+          "childCount": 3
+        },
+        {
+          "tag": "main",
+          "layout": "flex-row",
+          "classes": [
+            "flex-1",
+            "pt-24",
+            "px-margin",
+            "pb-margin",
+            "overflow-y-auto"
+          ],
+          "childCount": 9
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "Add Work Item",
+          "classes": [
+            "h-10",
+            "px-6",
+            "bg-primary",
+            "text-on-primary",
+            "font-headline-md",
+            "rounded",
+            "hover:opacity-90",
+            "active:scale-95",
+            "transition-all",
+            "whitespace-nowrap"
+          ],
+          "icon": null,
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "OP",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Control Center Precision Operations",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "dashboard",
+          "classes": [],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedRoute": "/",
+          "routeInferred": true,
+          "expectedBehavior": "navigate:/"
+        },
+        {
+          "kind": "button",
+          "label": "Active Boards",
+          "classes": [],
+          "icon": "view_kanban",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Team Velocity",
+          "classes": [],
+          "icon": "speed",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Resources",
+          "classes": [],
+          "icon": "group",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Archive",
+          "classes": [],
+          "icon": "inventory_2",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "settings",
+          "classes": [],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedRoute": "/settings",
+          "routeInferred": true,
+          "expectedBehavior": "navigate:/settings"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "Enter task details...",
+          "placeholder": "Enter task details...",
+          "name": "work-item-input",
+          "classes": [
+            "w-full",
+            "h-10",
+            "px-3",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "bg-surface-container-lowest",
+            "text-on-surface",
+            "font-body-md",
+            "focus:border-primary",
+            "focus:ring-1",
+            "focus:ring-primary",
+            "focus:outline-none"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [],
+      "cards": [],
+      "icons": [
+        "dashboard",
+        "view_kanban",
+        "speed",
+        "group",
+        "settings",
+        "notifications",
+        "help",
+        "list_alt",
+        "inbox"
+      ],
+      "images": [],
+      "cssVars": {},
+      "colorPalette": {},
+      "fonts": [
+        "Material Symbols Outlined",
+        "Inter",
+        "JetBrains Mono"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col",
+        "gap": "3"
+      },
+      "behaviorContract": [
+        {
+          "kind": "button",
+          "label": "Add Work Item",
+          "icon": null,
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "OP",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Control Center Precision Operations",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "action": "navigate",
+          "route": "/",
+          "expectedBehavior": "navigate:/"
+        },
+        {
+          "kind": "button",
+          "label": "Active Boards",
+          "icon": "view_kanban",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Team Velocity",
+          "icon": "speed",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Resources",
+          "icon": "group",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Archive",
+          "icon": "inventory_2",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "settings",
+          "icon": "settings",
+          "action": "navigate",
+          "route": "/settings",
+          "expectedBehavior": "navigate:/settings"
+        },
+        {
+          "kind": "input",
+          "label": "Enter task details...",
+          "type": "text",
+          "placeholder": "Enter task details...",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "OP",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "Control Center Precision Operations",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "Active Boards",
+          "icon": "view_kanban",
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "Team Velocity",
+          "icon": "speed",
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "Resources",
+          "icon": "group",
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "Archive",
+          "icon": "inventory_2",
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "settings",
+          "icon": "settings",
+          "active": true
+        }
+      ],
+      "title": "Operations Board - Operations Board"
+    }
+  }
+}

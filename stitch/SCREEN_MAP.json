@@ -1,0 +1,11 @@
+[
+  {
+    "screenId": "1adfab30f27d49fcad0bd2b2b6541467",
+    "name": "Operations Board - Operations Board",
+    "type": "app-screen",
+    "description": "Operations Board ProductSpec surface",
+    "surfaceIds": [
+      "SURF_OPS_BOARD_PAGE"
+    ]
+  }
+]

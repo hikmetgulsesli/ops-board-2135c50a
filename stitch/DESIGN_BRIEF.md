@@ -1,0 +1,37 @@
+# SETFARM_STITCH_V3_GENERATION_CONTRACT
+
+contract_schema: setfarm.design-generation-targets.v1
+product_spec_hash: fd7946f20b0e21682cec1876c2624f4f086b5e99e2026dca53e92932c7478d79
+stage_id: all-targets-preview
+Generate exactly 1 screens and no others in this response.
+Target device type: DESKTOP.
+All visible user-facing text must be in en.
+
+## EXACT_SCREEN_TARGETS
+SCREEN_TARGET_1:
+- target_ref: TARGET_OPS_BOARD_PAGE
+- surface_ref: SURF_OPS_BOARD_PAGE
+- exact_screen_title: Operations Board - Operations Board
+- surface_kind: page
+- exact_actions:
+  - action_ref: ACT_ADD_WORK_ITEM
+    visible_intent: AddWorkItem
+    exact_action_attribute: data-action="ACT_ADD_WORK_ITEM"
+    exact_input_mappings: ACT_ADD_WORK_ITEM.Text
+    exact_observable_selectors: [{"observableRef":"OBS_ADD_WORK_ITEM_ADD_BUTTON_VISIBLE","selector":{"kind":"surface","surfaceRef":"SURF_OPS_BOARD_PAGE"}},{"observableRef":"OBS_ADD_WORK_ITEM_CONFIRMATION_TEXT_VISIBLE","selector":{"kind":"surface","surfaceRef":"SURF_OPS_BOARD_PAGE"}},{"observableRef":"OBS_ADD_WORK_ITEM_NEW_ITEM_STATUS_OPEN","selector":{"kind":"surface","surfaceRef":"SURF_OPS_BOARD_PAGE"}},{"observableRef":"OBS_ADD_WORK_ITEM_PERSISTED_ITEM_VISIBLE_AFTER_RELOAD","selector":{"kind":"surface","surfaceRef":"SURF_OPS_BOARD_PAGE"}},{"observableRef":"OBS_ADD_WORK_ITEM_ROUTE_UNCHANGED","selector":{"kind":"surface","surfaceRef":"SURF_OPS_BOARD_PAGE"}}]
+
+## MACHINE_READABLE_COMPLETENESS_RULES
+- The returned screen title must equal exact_screen_title byte-for-byte. Do not abbreviate, translate, normalize, decorate, or rename it.
+- Return exactly one screen for each SCREEN_TARGET and no style-guide, assistant, summary, moodboard, PRD, or extra canvas.
+- For every exact_actions entry, render exactly one actionable HTML element and preserve the exact data-action="ACT_*" attribute on that same button, link, or input element.
+- Do not put ACT_* only in prose, labels, nearby wrappers, comments, scripts, or a different DOM element; the actionable element itself owns data-action.
+- For every exact_input_mappings entry, exactly one value-providing element must preserve data-action-input="ACT_*.field". A checkbox/action element may carry both data-action and data-action-input when it supplies its own value.
+- For every exact_observable_selectors entry, preserve the exact selector contract: control selectors bind the same data-action element, surface selectors require one wrapper with data-surface-id equal to the exact SURF_* ref, and accessibility selectors require the exact role plus an explicit aria-label equal to the declared name byte-for-byte on one element. The Setfarm converter assigns semantic observable IDs only after this exact match.
+- Do not emit any button, link, input, textarea, select, checkbox, tab, menu item, or other actionable control that is not declared by exact_actions or exact_input_mappings.
+- Disabled-looking, placeholder, icon-only, overflow, breadcrumb, navigation, and decorative controls are still controls and are forbidden unless declared above.
+- Custom data-action and data-action-input attributes are contractual source, not visual copy. Preserve their exact case and spelling in exported HTML.
+
+## PRODUCT_SCOPE
+Product: Operations Board
+Goals: Provide a single-page operations board at the /work route where users can add work items and see their additions reflected immediately. | Persist appended work items to local storage so that records survive full page reloads. | Keep the Add item button visible and enabled after each add and after reload, and stay on the /work page without navigation. | Show the literal confirmation text 'Item added' and render the newly added work item with the status value 'Open'.
+Do not invent product behavior outside the typed targets above.

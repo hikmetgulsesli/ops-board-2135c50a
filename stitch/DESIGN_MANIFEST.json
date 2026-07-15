@@ -1,0 +1,11 @@
+[
+  {
+    "screenId": "1adfab30f27d49fcad0bd2b2b6541467",
+    "title": "Operations Board - Operations Board",
+    "htmlFile": "1adfab30f27d49fcad0bd2b2b6541467.html",
+    "deviceType": "DESKTOP",
+    "surfaceIds": [
+      "SURF_OPS_BOARD_PAGE"
+    ]
+  }
+]
